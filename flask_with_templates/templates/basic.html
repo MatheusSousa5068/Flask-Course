@@ -8,8 +8,24 @@
 </head>
 
 <body>
-    <h1>Hello! {{name}}</h1>
-    <p>{{letters}}</p>
+    <h1>Website</h1>
+
+    {% for l in letters %}
+        <p>{{l}}</p>
+    {% endfor %}
+
+
+    {% if 'Lucas' in students %}
+        <p>Lucas' here</p>
+    {% else %}
+        <p>Lucas' here</p>
+    {% endif %}
+
+    {% if is_logged %}
+        <p>LOGGED</p>
+    {% else %}
+        <p>NOT LOGGED</p>
+    {% endif %}
 </body>
 
 </html>

@@ -6,7 +6,11 @@ app = Flask(__name__)
 def index():
     var = 'Pablo'
     letters = list(var)
-    return render_template('basic.html', name=var, letters=letters)
+
+    students = ['Matheus', 'Pablo', 'Marcela']
+
+    is_logged = False
+    return render_template('basic.html', letters=letters, students=students, is_logged = is_logged)
 
 
 
