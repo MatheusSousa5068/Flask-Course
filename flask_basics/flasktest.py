@@ -12,8 +12,9 @@ def info():
 
 @app.route('/user/<name>')
 def user(name: str):
-    return f'<p>User: {name}</p>'
+    return f"<p>User's 100th letter: {name[99]}</p>"
+
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
