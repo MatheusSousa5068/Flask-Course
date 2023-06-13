@@ -17,6 +17,7 @@ def user(name: str):
 def name_handler(name):
     if name[-1] != 'y':
         name += 'y'
+    else:
         name = name[:-1] + 'iful'
 
     return name
