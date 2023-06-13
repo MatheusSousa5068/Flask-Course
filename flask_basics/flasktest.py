@@ -6,5 +6,9 @@ app = Flask(__name__)
 def index():
     return '<p>EBA</p>'
 
+@app.route('/information/')
+def info():
+    return '<div>nice info</div>'
+
 if __name__ == "__main__":
     app.run()
