@@ -4,7 +4,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('basic.html')
+    var = 'Pablo'
+    letters = list(var)
+    return render_template('basic.html', name=var, letters=letters)
 
 
 
