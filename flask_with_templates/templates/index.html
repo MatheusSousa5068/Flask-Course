@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    {% extends "base.html" %}
+{% extends "base.html "%}
 
-    {% block content %}
-        <div class="jumbotron">
-            <p>Welcome to IFPB</p>
-            <p>Wanna join?</p>
-            <a href="{{ url_for('signup_form') }}">Sign up here</a>
-        </div>
-    {% endblock %}
-</body>
-</html>
+{% block content %}
+    <p>Let's see if your User name is secure!</p>
+    
+    <p>Fill out the form below with a User Name that has these restraints</p>
+    
+    <ul>
+        <li>Must have an upper case letter somewhere</li>
+        <li>Must have a lower case letter somewhere</li>
+        <li>Must have a number at the end</li>
+    </ul>
+
+    <form action="{{ url_for('report') }}">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="">
+
+        <input type="submit" value="Submit Form">
+    </form>
+
+{% endblock %}

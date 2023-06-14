@@ -1,0 +1,23 @@
+{% extends "base.html "%}
+
+{% block content %}
+    {% if cond1 and cond2 and cond3 %}
+        <h2>Let see how you performed!!</h2>
+        <h2>Your username passed the 3 requirements!</h2>
+
+    {% else %}
+        <ul>
+            {% if not cond1 %}
+                <li>You did not use a lower letter</li>
+            {% endif %}
+            {% if not cond2 %}
+                <li>You did not use an upper letter</li>
+            {% endif %}
+            {% if not cond3 %}
+                <li>You did not end your username with a number</li>
+            {% endif %}
+        </ul>
+    {% endif %}
+
+
+{% endblock %}
