@@ -4,13 +4,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    var = 'Pablo'
-    letters = list(var)
+    return render_template('home.html')
 
-    students = ['Matheus', 'Pablo', 'Marcela']
+@app.route('/user/<name>')
+def assertPage(name):
+    return render_template('assert.html', name=name)
 
-    is_logged = False
-    return render_template('basic.html', letters=letters, students=students, is_logged = is_logged)
+
 
 
 
