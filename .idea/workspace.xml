@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7007dafe-cbaa-42ac-9ef8-e7b9ef91bbe3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/flask-databases/CRUD.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask-databases/basic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask-databases/data.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask-databases/setupdatabase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask-databases/migrations/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask-databases/migrations/alembic.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask-databases/migrations/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask-databases/migrations/script.py.mako" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask-databases/basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask-databases/basic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask-databases/data.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/flask-databases/data.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +152,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686750785734</updated>
       <workItem from="1686750786729" duration="2531000" />
-      <workItem from="1686824353487" duration="8185000" />
+      <workItem from="1686824353487" duration="9396000" />
     </task>
     <servers />
   </component>
