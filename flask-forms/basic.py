@@ -8,6 +8,7 @@ app.config['SECRET_KEY'] = 'mysecretkey'
 
 
 class InfoForm(FlaskForm):
+    breed = StringField('What breed are you?')
     submit = SubmitField('Click Me!')
 
 
@@ -16,7 +17,9 @@ def index():
     form = InfoForm()
 
     if form.validate_on_submit():
-        flash('You just clicked the button')
+        session['breed'] = form.breed.data
+        flash(f"You just changed your breed to: {session['breed']}")
+
 
         return redirect(url_for('index'))
 
