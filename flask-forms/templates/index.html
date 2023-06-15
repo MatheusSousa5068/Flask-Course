@@ -12,20 +12,23 @@
     </style>
 </head>
 <body>
-    <h1>Home</h1>
-
-    <p>
-        {% if breed %}
-            The breed you entered is {{breed}}
-            Update it in the form below:
-        {% else %}
-            Please enter your breed
-        {% endif %}
-    </p>
+    <h1>Welcome to the Survey</h1>
 
     <form method="POST">
         {{form.hidden_tag()}}
-        {{form.breed.label}} {{form.breed()}}
+        <br>
+        {{form.breed.label}} {{form.breed}}
+        <br>
+        {{form.neutered.label}} {{form.neutered}}
+        <br>
+        {{form.food_choice.label}} {{form.food_choice}}
+        <br>
+        {{form.mood.label}} {{form.mood}}
+        <br>
+        Any other feedback?
+        <br>
+        {{form.feedback}}
+        <br>
         {{form.submit()}}
     </form>
 </body>
