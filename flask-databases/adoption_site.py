@@ -1,7 +1,7 @@
 import os
 
-from forms import AddForm, DelForm
-from flask import Flask, render_template, url_for, redirect
+from forms import AddPetForm, DelPetForm, AddOwnerForm
+from flask import session, Flask, render_template, url_for, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -44,7 +44,6 @@ class Pet(db.Model):
         for toy in self.toys:
             print(toy.item_name)
 
-
 class Toy(db.Model):
     __tablename__ = 'toys'
 
@@ -56,7 +55,6 @@ class Toy(db.Model):
     def __init__(self, item_name, pet_id):
         self.item_name = item_name
         self.pet_id = pet_id
-
 
 class Owner(db.Model):
     __tablename__ = 'owners'
@@ -78,7 +76,7 @@ def index():
 
 @app.route('/add/', methods=['GET', 'POST'])
 def add():
-    form = AddForm()
+    form = AddPetForm()
     if form.validate_on_submit():
         name = form.name.data
 
@@ -100,7 +98,7 @@ def list():
 
 @app.route('/delete/', methods=['GET', 'POST'])
 def delete():
-    form = DelForm()
+    form = DelPetForm()
     if form.validate_on_submit():
         id = form.id.data
         pet = Pet.query.get(id)
@@ -110,6 +108,29 @@ def delete():
 
         return redirect(url_for('list'))
     return render_template('delete.html', form=form)
+
+@app.route('/add_owner', methods=['GET', 'POST'])
+def add_owner():
+    form = AddOwnerForm()
+
+    if form.validate_on_submit():
+        name = form.name.data
+        pet_id = form.pet_id.data
+
+        if Pet.query.get(pet_id):
+            new_owner = Owner(name, pet_id)
+            db.session.add(new_owner)
+            db.session.commit()
+            session['owner_name'] = new_owner.name
+
+            print(Pet.query.get(pet_id))
+
+            flash(f"The owner name is {session['owner_name']}")
+
+        return redirect(url_for('add_owner'))
+
+    return render_template('add_owner.html', form=form)
+
 
 
 if __name__ == '__main__':

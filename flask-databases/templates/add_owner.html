@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1>Add owner</h1>
+        {% for mess in get_flashed_messages() %}
+            <p>{{mess}}</p>
+        {% endfor %}
+        <form method="post">
+            {{form.hidden_tag()}}
+            {{form.name.label}} {{form.name}}
+            {{form.pet_id.label}} {{form.pet_id}}
+            {{form.submit()}}
+        </form>
+    </div>
+{% endblock %}
