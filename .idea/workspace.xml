@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7007dafe-cbaa-42ac-9ef8-e7b9ef91bbe3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/flask-databases/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask-databases/basic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask-databases/data.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask-databases/migrations/versions/4d8723ded760_initial_migration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-databases/CRUD.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-databases/basic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-databases/data.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-databases/setupdatabase.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask-databases/migrations/versions/d99caf963f3a_added_course_column.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask-databases/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask-databases/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.CRUD">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\www\Flask-Course\flask-databases" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.basic (1)">
     <configuration name="CRUD" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Flask-Course" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,6 +86,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask-databases/CRUD.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="basic (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Flask-Course" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask-databases" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask-databases/basic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -135,6 +162,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.basic (1)" />
         <item itemvalue="Python.CRUD" />
         <item itemvalue="Python.setupdatabase" />
         <item itemvalue="Python.basic" />
@@ -151,7 +179,7 @@
       <updated>1686750785734</updated>
       <workItem from="1686750786729" duration="2531000" />
       <workItem from="1686824353487" duration="10521000" />
-      <workItem from="1686911126453" duration="811000" />
+      <workItem from="1686911126453" duration="2173000" />
     </task>
     <servers />
   </component>
@@ -175,6 +203,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Flask_Course$CRUD.coverage" NAME="CRUD Coverage Results" MODIFIED="1686835491514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask-databases" />
     <SUITE FILE_PATH="coverage/Flask_Course$basic.coverage" NAME="basic Coverage Results" MODIFIED="1686826258353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask-forms" />
+    <SUITE FILE_PATH="coverage/Flask_Course$basic__1_.coverage" NAME="basic (1) Coverage Results" MODIFIED="1686913297073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask-databases" />
     <SUITE FILE_PATH="coverage/Flask_Course$setupdatabase.coverage" NAME="setupdatabase Coverage Results" MODIFIED="1686835489000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask-databases" />
   </component>
 </project>

@@ -6,11 +6,13 @@ from flask_migrate import Migrate
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
-app.config['SQLACHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 app.config['SQLALCHYEMY_TRACK_MODIFICATIONS'] = False
+app.app_context().push()
 
 db = SQLAlchemy(app)
 Migrate(app, db)
+
 
 class Pet(db.Model):
     __tablename__ = 'pets'
@@ -29,7 +31,7 @@ class Pet(db.Model):
 
     def __repr__(self):
         if self.owner:
-            return f'{self.owner} is the owner of {self.name}'
+            return f'{self.owner.name} is the owner of {self.name}'
 
         return f'{self.name} has no owner yet!'
 
@@ -43,7 +45,7 @@ class Toy(db.Model):
     __tablename__ = 'toys'
 
     id = db.Column(db.Integer, primary_key=True)
-    item_name = db.Columns(db.Text)
+    item_name = db.Column(db.Text)
 
     pet_id = db.Column(db.Integer, db.ForeignKey('pets.id'))
 
@@ -51,15 +53,15 @@ class Toy(db.Model):
         self.item_name = item_name
         self.pet_id = pet_id
 
+
 class Owner(db.Model):
     __tablename__ = 'owners'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Columns(db.Text)
+    name = db.Column(db.Text)
 
     pet_id = db.Column(db.Integer, db.ForeignKey('pets.id'))
 
     def __init__(self, name, pet_id):
         self.name = name
         self.pet_id = pet_id
-
