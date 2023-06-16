@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1>Delete pet</h1>
 
-</body>
-</html>
+        <form method="post">
+            {{form.hidden_tag()}}
+            {{form.id.label}} {{form.id}}
+            {{form.submit()}}
+        </form>
+    </div>
+{% endblock %}

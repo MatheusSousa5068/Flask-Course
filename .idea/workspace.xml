@@ -5,22 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7007dafe-cbaa-42ac-9ef8-e7b9ef91bbe3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/flask-databases/adoption_site.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask-databases/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask-databases/templates/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask-databases/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask-databases/templates/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask-databases/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask-databases/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask-databases/data.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask-databases/migrations/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask-databases/migrations/alembic.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask-databases/migrations/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask-databases/migrations/script.py.mako" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-databases/basic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-databases/data.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-databases/migrations/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-databases/migrations/alembic.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-databases/migrations/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-databases/migrations/script.py.mako" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-databases/migrations/versions/4d8723ded760_initial_migration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-databases/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask-databases/adoption_site.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask-databases/adoption_site.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask-databases/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask-databases/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask-databases/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask-databases/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask-databases/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask-databases/templates/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask-databases/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask-databases/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask-databases/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask-databases/templates/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +77,7 @@
       <recent name="D:\www\Flask-Course\flask-databases" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.basic (1)">
+  <component name="RunManager" selected="Python.adoption_site">
     <configuration name="CRUD" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Flask-Course" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,6 +92,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask-databases/CRUD.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="adoption_site" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Flask-Course" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask-databases" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask-databases/adoption_site.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -172,6 +190,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.adoption_site" />
         <item itemvalue="Python.basic (1)" />
         <item itemvalue="Python.CRUD" />
         <item itemvalue="Python.setupdatabase" />
@@ -189,7 +208,7 @@
       <updated>1686750785734</updated>
       <workItem from="1686750786729" duration="2531000" />
       <workItem from="1686824353487" duration="10521000" />
-      <workItem from="1686911126453" duration="3472000" />
+      <workItem from="1686911126453" duration="5922000" />
     </task>
     <servers />
   </component>
@@ -214,6 +233,7 @@
     <SUITE FILE_PATH="coverage/Flask_Course$CRUD.coverage" NAME="CRUD Coverage Results" MODIFIED="1686835491514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask-databases" />
     <SUITE FILE_PATH="coverage/Flask_Course$basic.coverage" NAME="basic Coverage Results" MODIFIED="1686826258353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask-forms" />
     <SUITE FILE_PATH="coverage/Flask_Course$basic__1_.coverage" NAME="basic (1) Coverage Results" MODIFIED="1686913297073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask-databases" />
+    <SUITE FILE_PATH="coverage/Flask_Course$adoption_site.coverage" NAME="adoption_site Coverage Results" MODIFIED="1686916635603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask-databases" />
     <SUITE FILE_PATH="coverage/Flask_Course$setupdatabase.coverage" NAME="setupdatabase Coverage Results" MODIFIED="1686835489000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask-databases" />
   </component>
 </project>

@@ -90,6 +90,7 @@ def add():
 
     return render_template('add.html', form=form)
 
+
 @app.route('/list/')
 def list():
     pets = Pet.query.all()
@@ -97,7 +98,7 @@ def list():
     return render_template('list.html', pets=pets)
 
 
-@app.route('/delete/', methods=['GET','POST'])
+@app.route('/delete/', methods=['GET', 'POST'])
 def delete():
     form = DelForm()
     if form.validate_on_submit():
@@ -109,6 +110,7 @@ def delete():
 
         return redirect(url_for('list'))
     return render_template('delete.html', form=form)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
