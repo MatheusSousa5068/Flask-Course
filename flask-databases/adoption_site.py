@@ -1,13 +1,17 @@
 import os
-from flask import Flask
+
+from forms import AddForm, DelForm
+from flask import Flask, render_template, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'mysecretkey'
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-app.config['SQLALCHYEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.app_context().push()
 
 db = SQLAlchemy(app)
@@ -65,3 +69,46 @@ class Owner(db.Model):
     def __init__(self, name, pet_id):
         self.name = name
         self.pet_id = pet_id
+
+
+@app.route('/')
+def index():
+    return render_template('home.html')
+
+
+@app.route('/add/', methods=['GET', 'POST'])
+def add():
+    form = AddForm()
+    if form.validate_on_submit():
+        name = form.name.data
+
+        new_pet = Pet(name)
+        db.session.add(new_pet)
+        db.session.commit()
+
+        return redirect(url_for('list'))
+
+    return render_template('add.html', form=form)
+
+@app.route('/list/')
+def list():
+    pets = Pet.query.all()
+
+    return render_template('list.html', pets=pets)
+
+
+@app.route('/delete/', methods=['GET','POST'])
+def delete():
+    form = DelForm()
+    if form.validate_on_submit():
+        id = form.id.data
+        pet = Pet.query.get(id)
+
+        db.session.delete(pet)
+        db.session.commit()
+
+        return redirect(url_for('list'))
+    return render_template('delete.html', form=form)
+
+if __name__ == '__main__':
+    app.run(debug=True)
