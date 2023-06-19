@@ -58,7 +58,7 @@ def register():
 def logout():
     logout_user()
     flash('You logged out')
-    return redirect(url_for('home'))
+    return redirect(url_for('index'))
 
 
 if __name__ == '__main__':
