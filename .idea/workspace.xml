@@ -142,7 +142,7 @@
     </configuration>
     <configuration name="Flask-Course" type="Python.FlaskServer">
       <module name="Flask-Course" />
-      <option name="target" value="$PROJECT_DIR$/myproject/__init__.py" />
+      <option name="target" value="$PROJECT_DIR$/SocialCompanyBlog/__init__.py" />
       <option name="targetType" value="PATH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
