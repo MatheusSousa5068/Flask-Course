@@ -6,7 +6,7 @@ import datetime
 bcrypt = Bcrypt()
 
 
-@login_manager.user_loader()
+@login_manager.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
 
@@ -43,7 +43,7 @@ class BlogPost(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    date = db.Column(db.DateTime, nullable=False, default=datetime.UTC)
     title = db.Column(db.String(140), nullable=False)
     text = db.Column(db.Text, nullable=False)
 

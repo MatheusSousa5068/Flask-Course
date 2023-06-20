@@ -34,6 +34,7 @@ class RegistrationForm(FlaskForm):
         if User.query.filter_by(username=self.username.data).first():
             raise ValidationError('Username has been registered')
 
+
 class UpdateUserForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     username = StringField('Username', validators=[DataRequired()])
