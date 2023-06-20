@@ -15,6 +15,7 @@ app.config['SECRET_KEY'] = 'mysecret'
 blueprint = make_google_blueprint(
     client_id=os.environ.get('CLIENT_ID'),
     client_secret=os.environ.get('CLIENT_SECRET'),
+    scope=["profile", "email"],
     offline=True
 )
 
@@ -35,10 +36,14 @@ def login():
 
     return render_template('welcome.html', email=email)
 
+
 @app.route('/welcome')
 def welcome():
-    resp = google.get('/oauth2/v2/userinfo')
+    resp = google.get("/oauth2/v2/userinfo")
     assert resp.ok, resp.text
-    email = resp.json()['email']
+    email = resp.json()["email"]
 
-    return render_template('welcome.html', email=email)
+    return render_template("welcome.html",email=email)
+
+if __name__ == '__main__':
+    app.run(debug=True)
