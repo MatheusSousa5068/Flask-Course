@@ -9,21 +9,21 @@ from SocialCompanyBlog.models import User
 
 class LoginForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
-    password = StringField('Password', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Log In')
 
 
 class RegistrationForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     username = StringField('Username', validators=[DataRequired()])
-    password = StringField(
+    password = PasswordField(
         'Password',
         validators=[
             DataRequired(),
             EqualTo('pass_confirmation')
         ]
     )
-    pass_confirmation = StringField('Confirm password', validators=[DataRequired()])
+    pass_confirmation = PasswordField('Confirm password', validators=[DataRequired()])
     submit = SubmitField('Register')
 
     def validate_email(self, email):
