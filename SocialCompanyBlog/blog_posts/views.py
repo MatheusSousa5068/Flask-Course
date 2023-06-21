@@ -35,8 +35,6 @@ def blog_post(blog_post_id):
     blog_post = BlogPost.query.get_or_404(blog_post_id)
 
     return render_template('blog_post.html',
-                           title=blog_post.title,
-                           date=blog_post.date,
                            post=blog_post
                            )
 
