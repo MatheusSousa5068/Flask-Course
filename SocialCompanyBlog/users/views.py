@@ -92,7 +92,8 @@ def user_post(username):
     blog_posts = (
         BlogPost.query.filter_by(author=user)
         .order_by(BlogPost.date.desc())
-        .paginate(page=page, )
+        .paginate(page=page,
+                  per_page=5)
     )
     print(blog_posts)
     return render_template('user_blog_posts.html', blog_posts=blog_posts)
